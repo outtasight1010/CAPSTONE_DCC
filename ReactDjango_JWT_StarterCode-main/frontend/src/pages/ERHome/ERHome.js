@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
+import { faHeartMusicCameraBolt, faHeartPulse, faHome } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import './ERHome.css';
 
 const HomePage = () => {
@@ -41,7 +44,22 @@ const HomePage = () => {
 
   return (
     <div style={{ backgroundColor: "azure", padding: "20px" }}>
-  <h1 style={{ color: "almond", fontSize: "14px" }}>Welcome, {user.username}!</h1>
+        <FontAwesomeIcon
+        icon={faHeartPulse}
+        size="lg"
+        style={{ color: "red", marginBottom: "10px", marginRight: "10px" }} // Adding marginRight for spacing
+        />
+         <FontAwesomeIcon
+        icon={faHeartPulse}
+        size="lg"
+        style={{ color: "red", marginBottom: "10px", marginRight: "10px",  }} // Adding marginRight for spacing
+       />
+       <FontAwesomeIcon
+        icon={faHeartPulse}
+        size="lg"
+        style={{ color: "red", marginBottom: "10px" }} // Adding marginRight for spacing
+       />
+      <h1 style={{ color: "almond", fontSize: "14px" }}>Welcome, {user.username}!</h1>
       <h2>Patients:</h2>
       <ul>
         {patients.map((patient) => (
