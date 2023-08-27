@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
-import { faHeartMusicCameraBolt, faHeartPulse, faHome, faPeopleArrows, faPeopleLine, faPerson } from "@fortawesome/free-solid-svg-icons";
+import { faHeartPulse, faPeopleArrows} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import './ERHome.css';
 
-const HomePage = () => {
+const ERHome = () => {
   const [user, token] = useAuth();
   const [patients, setPatients] = useState([]);
   const [queues, setQueues] = useState([]);
@@ -77,4 +77,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default ERHome;
