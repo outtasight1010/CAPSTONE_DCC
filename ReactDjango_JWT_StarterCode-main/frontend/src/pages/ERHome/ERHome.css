@@ -1,0 +1,17 @@
+.homepage-container {
+    background-color: lightgray;
+    padding: 20px;
+  }
+  
+  .header {
+    color: blue;
+  }
+
+  h2 {
+    font-size: 14px;
+    color: darkblue;
+    font-weight: bolder;
+    font-family:sans-serif;
+    padding-top: 20px;
+
+  }
