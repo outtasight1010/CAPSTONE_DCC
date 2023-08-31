@@ -7,6 +7,7 @@ import "./App.css";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import ERHome from "./pages/ERHome/ERHome";
+import InsurancePage from "./pages/InsurancePage/InsurancePage";
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
@@ -31,6 +32,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
         )}
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/add-insurance" element={<InsurancePage />} /> {/* Add this route */}
         <Route path="/login" element={<LoginPage />} />
       </Routes>
       <Footer />
