@@ -1,3 +1,39 @@
+.landing-page {
+    background-image: url('https://mcdn.wallpapersafari.com/medium/48/4/Ucdm0N.jpg'); /* Relative path to your image file */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    text-align: center;
+    min-height: 100vh; /* Ensure the background covers the entire viewport height */
+  }
+  
+  .landing-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .image-container {
+    border: 2px solid #ccc;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  
+  .landing-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  
+  
+  
+  
+
+
 body {
     background-color:aliceblue; /* Set your desired background color here */
     margin: 0; /* Remove default body margin */
