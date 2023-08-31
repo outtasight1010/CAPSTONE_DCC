@@ -4,6 +4,7 @@ const InsurancePage = () => {
   const [insuranceName, setInsuranceName] = useState("");
   const [policyNumber, setPolicyNumber] = useState("");
   const [noInsurance, setNoInsurance] = useState(false);
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -51,6 +52,8 @@ const InsurancePage = () => {
             No Insurance
           </label>
         </div>
+        
+        
         <button type="submit">Submit</button>
       </form>
     </div>
