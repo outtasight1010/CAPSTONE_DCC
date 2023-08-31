@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 import useCustomForm from "../../hooks/useCustomForm";
+import { Link } from "react-router-dom";
 
 const RegisterPage = () => {
   const { registerUser } = useContext(AuthContext);
@@ -70,6 +71,7 @@ const RegisterPage = () => {
         </p>
         <button>Register!</button>
       </form>
+      <Link to="/add-insurance">Add Insurance Credentials</Link> {/* Link to InsurancePage */}
     </div>
   );
 };

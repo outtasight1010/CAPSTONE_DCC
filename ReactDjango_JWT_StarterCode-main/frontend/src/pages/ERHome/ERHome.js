@@ -12,6 +12,7 @@ const ERHome = () => {
   const [activeQueue, setActiveQueue] = useState({});
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [addedPatients, setAddedPatients] = useState([]);
 
   const fetchPatients = async () => {
     try {
@@ -60,6 +61,7 @@ const ERHome = () => {
       setLastName("");
       fetchPatients();
       fetchActiveQueue();
+      setAddedPatients([...addedPatients, { first_name: firstName, last_name: lastName }]);
     } catch (error) {
       console.log(error.response.data);
     }
@@ -68,6 +70,12 @@ const ERHome = () => {
   return (
     <div className="container">
       {/* ... Existing content ... */}
+      <h2>Added Patients:</h2>
+      <ul>
+        {addedPatients.map((patient, index) => (
+          <li key={index}>{patient.first_name} {patient.last_name}</li>
+        ))}
+      </ul>
       <h2>Add Patient to Queue:</h2>
       <FontAwesomeIcon icon={faPersonWalkingArrowLoopLeft} style={{ marginRight: "5px" }} />
       <form onSubmit={handleSubmit}>
