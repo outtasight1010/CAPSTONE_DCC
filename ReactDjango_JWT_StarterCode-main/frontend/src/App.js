@@ -12,23 +12,24 @@ import ERHome from "./pages/ERHome/ERHome";
 import Navbar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import PatientPopup from "./components/PatientPopup/PatientPopup";
+import LandingPage from "./components/LandingPage/LandingPage";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
+import useAuth from "./hooks/useAuth";
 
 function App() {
+  const [user] = useAuth();
+
   return (
     <div>
       <Navbar />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <PrivateRoute>
-              <ERHome />
-            </PrivateRoute>
-          }
-        />
+        {user ? (
+          <Route path="/" element={<ERHome />} />
+        ) : (
+          <Route path="/" element={<LandingPage />} />
+        )}
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>

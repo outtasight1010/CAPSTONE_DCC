@@ -1,0 +1,35 @@
+body {
+    background-color:aliceblue; /* Set your desired background color here */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+  }
+
+.image-container {
+    border: 5px #f0f0f0;
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    max-width: 500px; /* Limit the width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    background-color:whitesmoke;
+  }
+  
+  .image-link {
+    display: inline-block;
+    transition: transform 0.3s; /* Add smooth transition for the zoom effect */
+  }
+  
+  .image-link:hover {
+    transform: scale(1.1); /* Apply the zoom effect on hover */
+  }
+  .landing-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .landing-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
