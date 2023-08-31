@@ -1,5 +1,6 @@
 import React from "react";
 import './LandingPage.css';
+import { Link } from "react-router-dom";
 
 
 const LandingPage = () => {
@@ -15,10 +16,17 @@ const LandingPage = () => {
           />
         </a>
       </div>
+      <div className="button-container">
+        <Link to="/register" className="register-button">
+          Register as Patient
+        </Link>
+        <Link to="/login" className="login-button">
+          Log in as Medical Staff
+        </Link>
+      </div>
     </div>
-  )
+  );
 };
 
 export default LandingPage;
-
 

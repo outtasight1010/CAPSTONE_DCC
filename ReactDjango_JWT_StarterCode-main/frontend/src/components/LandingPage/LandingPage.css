@@ -28,12 +28,6 @@
     height: auto;
   }
 
-  
-  
-  
-  
-
-
 body {
     background-color:aliceblue; /* Set your desired background color here */
     margin: 0; /* Remove default body margin */
@@ -67,5 +61,29 @@ body {
   .landing-image {
     max-width: 100%;
     height: auto;
+  }
+  /* LandingPage.css */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .register-button {
+    padding: 10px 20px;
+    background-color: #c632b0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .login-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
   }
   
