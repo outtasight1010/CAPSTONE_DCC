@@ -7,6 +7,7 @@ import "./App.css";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import ERHome from "./pages/ERHome/ERHome";
+import ERHome2 from "./pages/ERHome2/ERHome2";
 import InsurancePage from "./pages/InsurancePage/InsurancePage";
 
 // Component Imports
@@ -27,7 +28,7 @@ function App() {
       <Navbar />
       <Routes>
         {user ? (
-          <Route path="/" element={<ERHome />} />
+          <Route path="/" element={<ERHome2 />} />
         ) : (
           <Route path="/" element={<LandingPage />} />
         )}

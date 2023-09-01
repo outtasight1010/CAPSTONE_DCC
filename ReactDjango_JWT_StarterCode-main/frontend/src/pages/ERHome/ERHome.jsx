@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
-import { faHeartPulse, faPeopleArrows, faPeopleLine, faPersonWalkingArrowLoopLeft } from "@fortawesome/free-solid-svg-icons";
+import { faPersonWalkingArrowLoopLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./ERHome.css";
@@ -13,6 +13,8 @@ const ERHome = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [addedPatients, setAddedPatients] = useState([]);
+
+  axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
   const fetchPatients = async () => {
     try {
@@ -41,6 +43,7 @@ const ERHome = () => {
   };
 
   useEffect(() => {
+
     fetchPatients();
     fetchActiveQueue();
   }, [token]);
@@ -74,6 +77,12 @@ const ERHome = () => {
       <ul>
         {addedPatients.map((patient, index) => (
           <li key={index}>{patient.first_name} {patient.last_name}</li>
+        ))}
+      </ul>
+      <h2>All Patients:</h2>
+      <ul>
+        {patients.map((patient) => (
+          <li key={patient.id}>{patient.first_name} {patient.last_name}</li>
         ))}
       </ul>
       <h2>Add Patient to Queue:</h2>

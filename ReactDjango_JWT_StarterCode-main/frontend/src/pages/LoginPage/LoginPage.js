@@ -17,6 +17,17 @@ const LoginPage = () => {
       reset();
     }
   }, [isServerError]);
+  
+
+  const handleLogin = async () => {
+    const response = await loginUser(formData); // Assuming loginUser returns response
+    if (response && response.token) {
+      // Store the token in localStorage
+      localStorage.setItem("token", response.token);
+
+    
+    }
+  };
 
   return (
     <div className="container">
@@ -33,7 +44,7 @@ const LoginPage = () => {
         <label>
           Password:{" "}
           <input
-            type="text"
+            type="password"
             name="password"
             value={formData.password}
             onChange={handleInputChange}
@@ -42,11 +53,11 @@ const LoginPage = () => {
         {isServerError ? (
           <p className="error">Login failed, incorrect credentials!</p>
         ) : null}
-        <Link to="/register">Click to register!</Link>
-        <button>Login!</button>
+        <button onClick={handleLogin}>Login!</button>
       </form>
     </div>
   );
 };
 
 export default LoginPage;
+
