@@ -11,18 +11,25 @@ const ERHome2 = () => {
 
   const fetchAllPatients = async () => {
     try {
-      let response = await axios.get("/api/patients/all/");
-      console.log("Fetched patients:", response.data);
+      let response = await axios.get("http://127.0.0.1:8000/api/patients/all/", {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      });
       setPatients(response.data);
     } catch (error) {
       console.log("Error fetching patients:", error.response.data);
     }
   };
   
+  
+  
 
   useEffect(() => {
-    fetchAllPatients(); // Fetch all patients when the component mounts
-  }, []);
+    axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+    fetchAllPatients();
+  }, [token]);
+  
 
   const handlePatientChange = (event) => {
     setSelectedPatient(event.target.value);
