@@ -15,8 +15,15 @@ def register_patient(request):
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET'])
-@permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])  
 def get_patient_details(request):
     patient = Patient.objects.get(user=request.user)
     serializer = PatientSerializer(patient)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])  
+def get_all_patients(request):
+    patients = Patient.objects.all()
+    serializer = PatientSerializer(patients, many=True)
     return Response(serializer.data)

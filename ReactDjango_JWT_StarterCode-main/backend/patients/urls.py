@@ -1,8 +1,8 @@
 from django.urls import path
-from . import views  # Import your patient views here
+from .views import register_patient, get_patient_details, get_all_patients
 
 urlpatterns = [
-    path('register/', views.register_patient, name='register_patient'),
-    path('details/', views.get_patient_details, name='get_patient_details'),
-    # Add more URLs for other patient views if needed
+    path('register/', register_patient, name='register-patient'),
+    path('details/', get_patient_details, name='patient-details'),
+    path('all/', get_all_patients, name='all-patients'),  
 ]
