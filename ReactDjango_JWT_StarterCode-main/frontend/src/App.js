@@ -8,6 +8,8 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import ERHome from "./pages/ERHome/ERHome";
 import ERHome2 from "./pages/ERHome2/ERHome2";
+import "react-toastify/dist/ReactToastify.css"; // Import toastify styles
+import { ToastContainer } from "react-toastify";
 import InsurancePage from "./pages/InsurancePage/InsurancePage";
 
 // Component Imports
@@ -28,7 +30,7 @@ function App() {
       <Navbar />
       <Routes>
         {user ? (
-          <Route path="/" element={<ERHome2 />} />
+          <Route path="/" element={<ERHome2/>} />
         ) : (
           <Route path="/" element={<LandingPage />} />
         )}
@@ -36,6 +38,7 @@ function App() {
         <Route path="/add-insurance" element={<InsurancePage />} /> {/* Add this route */}
         <Route path="/login" element={<LoginPage />} />
       </Routes>
+      <ToastContainer position="top-center" autoClose={3000} />
       <Footer />
     </div>
   );

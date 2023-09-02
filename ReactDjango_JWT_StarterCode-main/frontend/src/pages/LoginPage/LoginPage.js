@@ -1,4 +1,6 @@
 import React, { useContext, useEffect } from "react";
+import { toast, ToastContainer } from "react-toastify"; // Import toast and ToastContainer
+import "react-toastify/dist/ReactToastify.css"; // Import the stylesheet
 import AuthContext from "../../context/AuthContext";
 import useCustomForm from "../../hooks/useCustomForm";
 import { Link } from "react-router-dom";
@@ -20,14 +22,16 @@ const LoginPage = () => {
   
 
   const handleLogin = async () => {
-    const response = await loginUser(formData); // Assuming loginUser returns response
+    const response = await loginUser(formData); 
     if (response && response.token) {
-      // Store the token in localStorage
+      // Storing the token in localStorage
       localStorage.setItem("token", response.token);
-
-    
+      // Other actions upon successful login
+    } else {
+      reset();
     }
   };
+
 
   return (
     <div className="container">

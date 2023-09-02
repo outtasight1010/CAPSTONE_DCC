@@ -18,7 +18,7 @@ const ERHome = () => {
 
   const fetchPatients = async () => {
     try {
-      let response = await axios.get("/api/patients/details/", {
+      let response = await axios.get("http://127.0.0.1:8000/api/patients/details/", {
         headers: {
           Authorization: "Bearer " + token,
         },
@@ -31,7 +31,7 @@ const ERHome = () => {
 
   const fetchActiveQueue = async () => {
     try {
-      let response = await axios.get("/api/queues/active/", {
+      let response = await axios.get("http://127.0.0.1:8000/api/queues/active/", {
         headers: {
           Authorization: "Bearer " + token,
         },

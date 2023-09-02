@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
+import { toast } from "react-toastify";
+import './ERHome2.css';
+
 
 const ERHome2 = () => {
   const [user, token] = useAuth();
@@ -33,12 +36,13 @@ const ERHome2 = () => {
 
   const handlePatientChange = (event) => {
     setSelectedPatient(event.target.value);
+    toast.success("Patient is patiently waiting. Make it a great day!");
   };
 
   return (
     <div className="container">
       <h2>Select Patient:</h2>
-      <select value={selectedPatient} onChange={handlePatientChange}>
+      <select className="custom-dropdown" value={selectedPatient} onChange={handlePatientChange}>
         <option value="">Select a patient</option>
         {patients.map((patient) => (
           <option key={patient.id} value={patient.id}>
@@ -47,7 +51,11 @@ const ERHome2 = () => {
         ))}
       </select>
       {selectedPatient && (
-        <p>You selected: {patients.find((patient) => patient.id === selectedPatient)?.first_name} {patients.find((patient) => patient.id === selectedPatient)?.last_name}</p>
+        <p>
+         
+          {patients.find((patient) => patient.id === selectedPatient)?.first_name}{" "}
+          {patients.find((patient) => patient.id === selectedPatient)?.last_name}
+        </p>
       )}
     </div>
   );
