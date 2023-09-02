@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import './ERHome2.css';
 
@@ -51,11 +52,9 @@ const ERHome2 = () => {
         ))}
       </select>
       {selectedPatient && (
-        <p>
-         
-          {patients.find((patient) => patient.id === selectedPatient)?.first_name}{" "}
-          {patients.find((patient) => patient.id === selectedPatient)?.last_name}
-        </p>
+        <Link to={`/patient/${selectedPatient}`}>
+        View Patient Details
+        </Link>
       )}
     </div>
   );
