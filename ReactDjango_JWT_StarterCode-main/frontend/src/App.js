@@ -43,6 +43,7 @@ function App() {
         <Route path="/patient/:patientId" element={<PatientDetailsPage />} />
         <Route path="/add-patient" element={<AddPatientForm />} />
         <Route path="/select-patient" element={<ERHome2 />} />
+        
       </Routes>
       <ToastContainer position="top-center" autoClose={3000} />
       

@@ -6,6 +6,7 @@ import './PatientDetailsPage.css';
 
 const PatientDetailsPage = () => {
   const { patientId } = useParams();
+  console.log("Patient ID:", patientId);
   const [patientDetails, setPatientDetails] = useState(null);
 
   useEffect(() => {
@@ -15,10 +16,10 @@ const PatientDetailsPage = () => {
           console.log("Retrieved token:", token);
 
           // Log the token to the console
-        console.log("Token:", token);
+          console.log("Token:", token);
           axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
       
-          const response = await axios.get(`http://127.0.0.1:8000/api/patients/details/${patientId}`);
+          const response = await axios.get(`http://127.0.0.1:8000/api/patients/details/${patientId}/`);
           setPatientDetails(response.data);
           console.log("Response:", response);
         } catch (error) {

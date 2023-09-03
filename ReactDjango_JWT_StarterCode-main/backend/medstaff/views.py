@@ -8,7 +8,7 @@ from .serializers import MedicalStaffSerializer, PatientSerializer
 @permission_classes([IsAuthenticated])
 def patients(request):
     if request.method == 'GET':
-        patients = Patient.objects.filter(staff=request.user.medicalstaff)  # Only show patients registered by the medical staff
+        patients = Patient.objects.filter(staff=request.user.medicalstaff)  
         serializer = PatientSerializer(patients, many=True)
         return Response(serializer.data)
     elif request.method == 'POST':
