@@ -1,0 +1,49 @@
+/* DashboardPage.css */
+.dashboard-container {
+    background-image: url('./image_4.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dashboard-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    /*background-color: rgba(239, 213, 234, 0.7);*/
+    padding: 2rem;
+  }
+
+  h1 {
+    margin-bottom:400px;
+    
+}
+
+  p {
+    font-size: 20px;
+    color: aliceblue;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    margin-left: 1000px;
+  }
+  
+  .dashboard-actions {
+    margin-bottom: 5rem;
+    display: flex;
+    gap: 1rem;
+    font-weight: bolder;
+    background-color: lightcyan;
+    border-radius: 3px;
+    font-size: smaller;
+    margin-left: 1000px;
+    
+  }
+  
+  /* Add more styles as needed */
+  

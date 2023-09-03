@@ -54,7 +54,7 @@ const ERHome2 = () => {
       {selectedPatient && (
         <Link to={`/patient/${selectedPatient}`}>
         View Patient Details
-        </Link>
+      </Link>
       )}
     </div>
   );
