@@ -17,9 +17,13 @@ def register_patient(request):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])  
 def get_patient_details(request):
-    patient = Patient.objects.get(user=request.user)
-    serializer = PatientSerializer(patient)
-    return Response(serializer.data)
+    try:
+        patient = Patient.objects.get(user=request.user)
+        serializer = PatientSerializer(patient)
+        return Response(serializer.data)
+    except Patient.DoesNotExist:
+        return Response({"detail": "Patient details not found."}, status=status.HTTP_404_NOT_FOUND)
+
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])  

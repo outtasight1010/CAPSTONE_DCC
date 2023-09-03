@@ -8,6 +8,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import ERHome from "./pages/ERHome/ERHome";
 import ERHome2 from "./pages/ERHome2/ERHome2";
+import PatientDetailsPage from "./pages/PatientDetailsPage/PatientDetailsPage";
 import "react-toastify/dist/ReactToastify.css"; // Import toastify styles
 import { ToastContainer } from "react-toastify";
 import InsurancePage from "./pages/InsurancePage/InsurancePage";
@@ -37,6 +38,8 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/add-insurance" element={<InsurancePage />} /> {/* Add this route */}
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/patient/:patientId" element={<PatientDetailsPage />} />
+
       </Routes>
       <ToastContainer position="top-center" autoClose={3000} />
       <Footer />

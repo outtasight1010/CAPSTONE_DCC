@@ -1,24 +1,35 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import useAuth from "../../hooks/useAuth";
 
 const PatientDetailsPage = () => {
-  const { patientId } = useParams(); 
+  const { patientId } = useParams();
   const [patientDetails, setPatientDetails] = useState(null);
 
   useEffect(() => {
-    // Fetching patient details using the patient ID
     const fetchPatientDetails = async () => {
-      try {
-        const response = await axios.get(`/api/patients/${patientId}/details`);
-        setPatientDetails(response.data);
-      } catch (error) {
-        console.log("Error fetching patient details:", error.response.data);
-      }
-    };
+        try {
+          const token = localStorage.getItem("token");
+          console.log("Retrieved token:", token);
+
+          // Log the token to the console
+        console.log("Token:", token);
+          axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+      
+          const response = await axios.get(`http://127.0.0.1:8000/api/patients/details/${patientId}`);
+          setPatientDetails(response.data);
+          console.log("Response:", response);
+        } catch (error) {
+          console.log("Error fetching patient details:", error.response.data);
+        }
+      };
+      
 
     fetchPatientDetails();
   }, [patientId]);
+
+
 
   return (
     <div className="container">
@@ -41,3 +52,5 @@ const PatientDetailsPage = () => {
 };
 
 export default PatientDetailsPage;
+
+
