@@ -23,7 +23,7 @@ const AddPatientForm = () => {
       axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/patients/register/",
+        "http://127.0.0.1:8000/api/patients/add-patient-name/",
         formData
       );
 
@@ -56,7 +56,7 @@ const AddPatientForm = () => {
           <input
             type="text"
             name="last_name"
-            value={formData.first_name}
+            value={formData.lamelza_name}
             onChange={handleInputChange}
           />
         </label>
