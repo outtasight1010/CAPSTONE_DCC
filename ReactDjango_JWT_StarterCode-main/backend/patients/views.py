@@ -29,9 +29,9 @@ def add_patient_name(request):
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])  
-def get_patient_details(request):
+def get_patient_details(request, patientId):
     try:
-        patient = Patient.objects.get(user=request.user)
+        patient = Patient.objects.get(id=patientId)
         serializer = PatientSerializer(patient)
         return Response(serializer.data)
     except Patient.DoesNotExist:
