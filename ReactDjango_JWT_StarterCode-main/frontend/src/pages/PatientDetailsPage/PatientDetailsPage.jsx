@@ -33,21 +33,21 @@ const PatientDetailsPage = () => {
       <div className="container">
         <h2>Patient Details</h2>
         {patientDetails ? (
-          <div>
-            <p>First Name: {patientDetails.first_name}</p>
-            <p>Last Name: {patientDetails.last_name}</p>
-            <p>Contact Number: {patientDetails.contact_number}</p>
-            <p>Medical History: {patientDetails.medical_history}</p>
-            <p>Joined Queue: {patientDetails.joined_queue ? "Yes" : "No"}</p>
-            <p>Queue Position: {patientDetails.queue_position}</p>
-            <p>Estimated Wait Time: {patientDetails.estimated_wait_time}</p>
-          </div>
-        ) : (
-          <p>Loading patient details...</p>
-        )}
-      </div>
-    );
-  };
+          <div className="patient-details">
+          <p><strong>First Name:</strong> {patientDetails.first_name}</p>
+          <p><strong>Last Name:</strong> {patientDetails.last_name}</p>
+          <p><strong>Contact Number:</strong> {patientDetails.contact_number}</p>
+          <p><strong>Medical History:</strong> {patientDetails.medical_history}</p>
+          <p><strong>Joined Queue:</strong> {patientDetails.joined_queue ? "Yes" : "No"}</p>
+          <p><strong>Queue Position:</strong> {patientDetails.queue_position}</p>
+          <p><strong>Estimated Wait Time:</strong> {patientDetails.estimated_wait_time}</p>
+        </div>
+      ) : (
+        <p>Loading patient details...</p>
+      )}
+    </div>
+  );
+};
 
   export default PatientDetailsPage;
 
