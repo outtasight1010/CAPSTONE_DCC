@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import './AddPatientForm.css';
 
-const AddPatientForm = ({ token }) => {
+const AddPatientForm = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
+  const [patients, setPatients] = useState([]); // This state will store patient entries
 
   const handleFirstNameChange = (e) => {
     setFirstName(e.target.value);
@@ -13,33 +14,21 @@ const AddPatientForm = ({ token }) => {
     setLastName(e.target.value);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    try {
-      const response = await axios.post(
-        'http://127.0.0.1:8000/api/patients/',
-        {
-          first_name: firstName,
-          last_name: lastName,
-        },
-        {
-          headers: {
-            Authorization: 'Bearer ' + token,
-          },
-        }
-      );
+    // Create a new patient entry object
+    const newPatient = {
+      firstName,
+      lastName,
+    };
 
-      // Handle success, e.g., show a success message or reset form fields
-      console.log('Patient added:', response.data);
+    // Add the new patient entry to the list
+    setPatients([...patients, newPatient]);
 
-      // Reset form fields
-      setFirstName('');
-      setLastName('');
-    } catch (error) {
-      // Handle errors, e.g., show an error message
-      console.error('Error adding patient:', error.response.data);
-    }
+    // Reset form fields
+    setFirstName('');
+    setLastName('');
   };
 
   return (
@@ -66,9 +55,26 @@ const AddPatientForm = ({ token }) => {
         </div>
         <button type="submit">Add Patient</button>
       </form>
+      <table>
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          {patients.map((patient, index) => (
+            <tr key={index}>
+              <td>{patient.firstName}</td>
+              <td>{patient.lastName}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
 
 export default AddPatientForm;
+
 

@@ -4,6 +4,7 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.decorators import api_view, permission_classes
 from .models import Patient
 from .serializers import PatientSerializer
+from .serializers import AddPatientFormSerializer
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
@@ -16,16 +17,15 @@ def register_patient(request):
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
-def add_patient_name(request):
-    first_name = request.data.get('first_name')
-    last_name = request.data.get('last_name')
-    
-    if first_name and last_name:
-        # You can add logic here to save the patient name to your database
-        
-        return Response({"message": "Patient name added successfully."}, status=status.HTTP_201_CREATED)
-    else:
-        return Response({"message": "First name and last name are required."}, status=status.HTTP_400_BAD_REQUEST)
+def add_patient(request):
+    serializer = AddPatientFormSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save(user=request.user)
+        return Response({"message": "Patient added successfully."}, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])  

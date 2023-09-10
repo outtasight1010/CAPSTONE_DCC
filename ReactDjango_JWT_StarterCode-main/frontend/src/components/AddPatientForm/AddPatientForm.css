@@ -1,0 +1,44 @@
+
+.container {
+    text-align: center;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  
+  /* Style input fields */
+  input[type="text"] {
+    width: 50%;
+    padding: 8px;
+    margin-bottom: 20px;
+    
+  }
+  
+  /* Style the button */
+  button[type="submit"] {
+    padding: 5px 10px; /* Adjust button size */
+    font-size: 8px;   /* Adjust button text size */
+    border-radius: 5px;
+    color:rgb(31, 9, 9);
+    font-weight: bold;
+    margin-left: 790px;
+  }
+  
+  /* Style the table */
+  table {
+    margin: 0 auto;
+  }
+  
+  /* Style table headers */
+  th {
+    background-color: #f2f2f2;
+    padding: 5px;
+    margin-top:  20px;
+  }
+  
+  /* Style table cells */
+  td {
+    padding: 15px;
+  }
+  
+  /* Add more styles as needed */
+  

@@ -9,3 +9,9 @@ class PatientSerializer(serializers.ModelSerializer):
             'medical_history', 'joined_queue', 'queue_position', 
             'estimated_wait_time', 'user'
         ]
+
+
+class AddPatientFormSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Patient
+        fields = ['first_name', 'last_name']

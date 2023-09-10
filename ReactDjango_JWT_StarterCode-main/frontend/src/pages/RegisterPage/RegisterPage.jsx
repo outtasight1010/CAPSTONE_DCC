@@ -19,8 +19,8 @@ const RegisterPage = () => {
   );
 
   return (
-    <div className="container">
-      <form className="form" onSubmit={handleSubmit}>
+    <div className="register-container">
+      <form className="register-form" onSubmit={handleSubmit}>
         <label>
           Username:{" "}
           <input
