@@ -10,6 +10,7 @@ class Patient(models.Model):
     joined_queue = models.BooleanField(default=False)
     queue_position = models.PositiveIntegerField(null=True, blank=True)
     estimated_wait_time = models.DurationField(null=True, blank=True)
+    pain_level = models.CharField(max_length=50, null=True, blank=True)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"

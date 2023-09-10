@@ -7,7 +7,7 @@ class PatientSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'first_name', 'last_name', 'contact_number', 
             'medical_history', 'joined_queue', 'queue_position', 
-            'estimated_wait_time', 'user'
+            'estimated_wait_time', 'user', 'pain_level'
         ]
 
 
