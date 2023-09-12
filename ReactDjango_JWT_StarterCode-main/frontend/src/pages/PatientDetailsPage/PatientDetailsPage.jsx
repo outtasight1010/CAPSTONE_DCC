@@ -41,6 +41,7 @@ const PatientDetailsPage = () => {
           <p><strong>Joined Queue:</strong> {patientDetails.joined_queue ? "Yes" : "No"}</p>
           <p><strong>Queue Position:</strong> {patientDetails.queue_position}</p>
           <p><strong>Estimated Wait Time:</strong> {patientDetails.estimated_wait_time}</p>
+          <p><strong>Pain Level: 1-5:</strong> {patientDetails.pain_level}</p>
         </div>
       ) : (
         <p>Loading patient details...</p>
