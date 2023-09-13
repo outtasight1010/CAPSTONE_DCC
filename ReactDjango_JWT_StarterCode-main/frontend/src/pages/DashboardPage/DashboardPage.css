@@ -44,6 +44,30 @@
     margin-left: 1000px;
     
   }
+
+blockquote p {
+  font-size: 12px;
+  font-style:italic;
+  color: #9f1e92;
   
-  /* Add more styles as needed */
+} 
+
+.dashboard-actions button {
+  background-color: #984491;
+  color: #fff;
+  padding: 8px 12px; /* Adjust the padding to make it smaller */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  font-size: 8px; /* Adjust the font size */
+  margin-right: 10px; /* Add margin to separate it from other links */
+}
+
+.dashboard-actions button:hover {
+  background-color: #9f1e92;
+}
+
+/* Rest of your styles */
+
   
