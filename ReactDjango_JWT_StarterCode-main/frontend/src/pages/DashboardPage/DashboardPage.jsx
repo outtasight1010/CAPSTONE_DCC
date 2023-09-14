@@ -35,7 +35,7 @@ const DashboardPage = () => {
         <p>What would you like to do?</p>
         <div className="dashboard-actions">
           <Link to="/select-patient">In Holding</Link>
-          <Link to="/view-queue">Queue</Link>
+          <Link to="/queue">Queue</Link>
           <Link to="/add-patient">Processed</Link>
           <button onClick={handleDailyQuoteClick}>Daily Quote</button>
         </div>
