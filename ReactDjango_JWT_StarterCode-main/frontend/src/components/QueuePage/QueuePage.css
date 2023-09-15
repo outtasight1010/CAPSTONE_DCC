@@ -7,19 +7,19 @@
     background-color:plum;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Add this to center horizontally */
-    justify-content: center; /* Add this to center vertically */
+    align-items: center; 
+    justify-content: center; 
   }
 
   h3{
     align-items: center;
     margin-left: 700px;
-    font-size: 30px; /* Increase font size */
-    color: #7a2a8e; /* Change text color to a cool blue */
-    text-transform: uppercase; /* Uppercase text */
-    letter-spacing: 2px; /* Add letter spacing */
-    margin-bottom: 20px; /* Add space below the heading */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow */
+    font-size: 30px; 
+    color: #7a2a8e; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    margin-bottom: 20px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
     }
   
   
