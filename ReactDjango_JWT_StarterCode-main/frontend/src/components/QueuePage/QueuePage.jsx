@@ -29,7 +29,7 @@ const QueuePage = () => {
 
   return (
     <div className = 'queue-page'>
-      <h2>Queue</h2>
+      <h3>Queue</h3>
       {queuePatients.length > 0 ? (
         <ul>
           {queuePatients.map((queue) => (
