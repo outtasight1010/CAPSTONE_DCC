@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import useAuth from "../../hooks/useAuth";
+import './QueuePage.css';
 
 const QueuePage = () => {
   const [queuePatients, setQueuePatients] = useState([]);
@@ -23,14 +24,25 @@ const QueuePage = () => {
 
     fetchQueuePatients();
   }, [token]); 
+  console.log("Rendering QueuePage");
+  console.log(queuePatients);
+
   return (
-    <div>
+    <div className = 'queue-page'>
       <h2>Queue</h2>
       {queuePatients.length > 0 ? (
         <ul>
-          {queuePatients.map((queuePatient) => (
-            <li key={queuePatient.id}>
-              {queuePatient.first_name} {queuePatient.last_name} - Position: {queuePatient.position}
+          {queuePatients.map((queue) => (
+            <li key={queue.id}>
+              <ul>
+                {queue.queue_entries.map((queueEntry, index) => (
+                  <li key={index}>
+                    First Name: {queueEntry.patient.first_name}<br />
+                    Last Name: {queueEntry.patient.last_name}<br />
+                    Queue Position: {queueEntry.position}
+                  </li>
+                ))}
+              </ul>
             </li>
           ))}
         </ul>
@@ -42,5 +54,11 @@ const QueuePage = () => {
 };
 
 export default QueuePage;
+
+
+
+
+
+
 
 

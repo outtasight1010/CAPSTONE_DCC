@@ -9,26 +9,25 @@ from patients.models import Patient
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_active_queue(request):
-    active_queue = Queue.objects.filter(is_active=True).first()
-    if active_queue:
-        serializer = QueueSerializer(active_queue)
+    active_queue = Queue.objects.filter(is_active=True)
+    if active_queue.exists():
+        serializer = QueueSerializer(active_queue, many=True)
         return Response(serializer.data)
     else:
-        print("No active queue found.")
-        return Response({"message": "No active queue found."}, status=status.HTTP_404_NOT_FOUND)
+        print("No active queues found.")
+        return Response({"message": "No active queues found."}, status=status.HTTP_404_NOT_FOUND)
 
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_queue_patients(request):
-    active_queue = Queue.objects.filter(is_active=True).first()
+    active_queue = Queue.objects.filter(is_active=True)
     if not active_queue:
         return Response({"message": "No active queue found."}, status=status.HTTP_404_NOT_FOUND)
-    
-    # Assuming you want to fetch patients in the active queue
     queue_entries = QueueEntry.objects.filter(queue=active_queue)
     serializer = QueueEntrySerializer(queue_entries, many=True)
     return Response(serializer.data)
+
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])

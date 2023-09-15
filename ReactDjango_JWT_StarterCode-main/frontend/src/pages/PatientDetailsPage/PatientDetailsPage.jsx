@@ -11,7 +11,7 @@ const PatientDetailsPage = () => {
   const [, token] = useAuth();
   console.log("Token:", token);
   const [patientDetails, setPatientDetails] = useState("");
-  //const [isMounted, setIsMounted] = useState(true); // Flag to track component's mounted state
+ 
 
   useEffect(() => {
     const fetchPatientDetails = async () => {
