@@ -1,32 +1,25 @@
-// MedicalSuppliesPage.jsx
 import React, { useState } from "react";
 
 const MedicalSuppliesPage = () => {
   const [supplyName, setSupplyName] = useState("");
   const [quantity, setQuantity] = useState("");
+  const [supplies, setSupplies] = useState([]); // Local state for supplies
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
 
-    // You can send the form data to the server for updating here
-    const formData = {
+    // Create a new supply object from form data
+    const newSupply = {
       supplyName,
       quantity,
     };
 
+    // Update the supplies list with the new supply
+    setSupplies([...supplies, newSupply]);
+
     // Reset the form fields after submitting
     setSupplyName("");
     setQuantity("");
-
-    // I'm deciding whether to fetch supplies from the API
-    // If, I DO decide to use API:
-    // axios.post("http://127.0.0.1:8000/api/update-medical-supplies/", formData)
-    //   .then((response) => {
-    //     // Handle the response if needed
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error updating medical supplies:", error);
-    //   });
   };
 
   return (
@@ -53,8 +46,21 @@ const MedicalSuppliesPage = () => {
         </label>
         <button type="submit">Update</button>
       </form>
+
+      {/* Display the list of supplies */}
+      <div>
+        <h3>Current Supplies:</h3>
+        <ul>
+          {supplies.map((supply, index) => (
+            <li key={index}>
+              {supply.supplyName} - Quantity: {supply.quantity}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
 
 export default MedicalSuppliesPage;
+

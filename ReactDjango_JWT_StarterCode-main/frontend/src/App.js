@@ -21,6 +21,7 @@ import Footer from "./components/Footer/Footer";
 import QueuePage from "./components/QueuePage/QueuePage";
 import LandingPage from "./components/LandingPage/LandingPage";
 import AddPatientForm from "./components/AddPatientForm/AddPatientForm";
+import MedicalSuppliesPage from "./components/MedicalSupplies/MedicalSupplies";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
@@ -39,6 +40,7 @@ function App() {
           <Route path="/add-patient" element={<AddPatientForm />} />
           <Route path="/select-patient" element={<ERHome2 />} />
           <Route path="/queue" element={<QueuePage />} />
+          <Route path="/medical-supplies" element={<MedicalSuppliesPage />} />
          </>  
         ) : (
           <Route path="/" element={<LandingPage />} />
