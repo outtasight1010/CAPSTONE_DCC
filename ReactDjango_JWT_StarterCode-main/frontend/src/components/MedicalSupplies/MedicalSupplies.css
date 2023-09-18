@@ -1,0 +1,35 @@
+.medical-supplies-container {
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .form-group label {
+    color: #FF0000; /* Change to your desired font color (e.g., red) */
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    color: #333; /* Change to your desired font color for inputs */
+  }
+  
+  .supply-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .supply-item {
+    color: blue; /* Change to your desired font color for supply items */
+  }
+  
+  .img {
+    size: 50%;
+  }
