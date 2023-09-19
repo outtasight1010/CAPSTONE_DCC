@@ -2,7 +2,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    # Other URLs for medical staff, if needed
-    path('add_patient/', views.add_patient, name='add_patient'),  # Endpoint to add patients to the queue
+    path('medical-staff/', views.list_medical_staff, name='list_medical_staff'),
+    path('medical-staff/create/', views.create_medical_staff, name='create_medical_staff'),
+    path('medical-staff/<int:pk>/', views.update_medical_staff, name='update_medical_staff'),
+    path('medical-staff/<int:pk>/delete/', views.delete_medical_staff, name='delete_medical_staff'),
 ]
 
