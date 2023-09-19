@@ -12,6 +12,14 @@ def list_medical_staff(request):
     serializer = MedicalStaffSerializer(medical_staff, many=True)
     return Response(serializer.data)
 
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def staff_on_duty(request):
+    staff = MedicalStaff.objects.all().values('full_name', 'title', 'job', 'shift')
+    return Response(staff)
+
+
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def create_medical_staff(request):
