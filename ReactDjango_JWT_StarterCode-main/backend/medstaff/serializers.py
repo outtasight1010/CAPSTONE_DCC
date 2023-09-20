@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import MedicalStaff, Patient
+from .models import MedicalStaff
 
 class MedicalStaffSerializer(serializers.ModelSerializer):
     class Meta:

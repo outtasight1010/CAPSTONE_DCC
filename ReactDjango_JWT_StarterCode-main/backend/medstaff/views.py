@@ -9,7 +9,7 @@ from .serializers import MedicalStaffSerializer
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def staff_on_duty(request):
-    staff = MedicalStaff.objects.all().values('full_name', 'title', 'job', 'shift')
-    return Response(staff)
-
+    staff_on_duty = MedicalStaff.objects.all()  
+    serializer = MedicalStaffSerializer(staff_on_duty, many=True)
+    return Response(serializer.data)
 

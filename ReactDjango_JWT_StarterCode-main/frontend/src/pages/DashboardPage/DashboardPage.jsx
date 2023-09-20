@@ -14,6 +14,7 @@ const DashboardPage = () => {
     "Let's make it a great day.",
     "Keep pushing forward.",
     "You are stronger than you think.",
+    "We are all in this together.",
     
   ];
 

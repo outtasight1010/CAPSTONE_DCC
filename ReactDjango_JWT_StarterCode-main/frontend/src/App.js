@@ -22,6 +22,7 @@ import QueuePage from "./components/QueuePage/QueuePage";
 import LandingPage from "./components/LandingPage/LandingPage";
 import AddPatientForm from "./components/AddPatientForm/AddPatientForm";
 import MedicalSuppliesPage from "./components/MedicalSupplies/MedicalSupplies";
+import StaffOnDutyPage from "./components/StaffOnDuty/StaffOnDuty";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
@@ -51,8 +52,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/patient/:patientId" element={<PatientDetailsPage />} />
         <Route path="/add-patient" element={<AddPatientForm />} />
-        
-        
+        <Route path="/staff-on-duty" element={<StaffOnDutyPage />} /> 
       </Routes>
       <ToastContainer position="top-center" autoClose={3000} />
       
