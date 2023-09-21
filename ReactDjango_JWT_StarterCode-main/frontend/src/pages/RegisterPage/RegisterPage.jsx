@@ -12,7 +12,11 @@ const RegisterPage = () => {
     password: "",
     firstName: "",
     lastName: "",
+    address: "",         // Add Address field
+    phoneNumber: "",     // Add Phone Number field
+    painLevel: "",       // Add Pain Level field
   };
+
   const [formData, handleInputChange, handleSubmit] = useCustomForm(
     defaultValues,
     registerUser
@@ -66,6 +70,33 @@ const RegisterPage = () => {
             onChange={handleInputChange}
           />
         </label>
+        <label>
+          Address:{" "}
+          <input
+            type="text"
+            name="address"
+            value={formData.address}
+            onChange={handleInputChange}
+          />
+        </label>
+        <label>
+          Phone Number:{" "}
+          <input
+            type="text"
+            name="phoneNumber"
+            value={formData.phoneNumber}
+            onChange={handleInputChange}
+          />
+        </label>
+        <label>
+          Pain Level: 1-5{" "}
+          <input
+            type="number"
+            name="painLevel"
+            value={formData.painLevel}
+            onChange={handleInputChange}
+          />
+        </label>
         <p style={{ fontSize: "12px" }}>
           NOTE: Make this an uncommon password with characters, numbers, and
           special characters!
@@ -83,3 +114,4 @@ const RegisterPage = () => {
 };
 
 export default RegisterPage;
+
