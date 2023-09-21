@@ -4,7 +4,7 @@ import './PatientDashboardPage.css';
 
 const PatientDashboardPage = () => {
   return (
-    <div>
+    <div className="patient-dashboard-container">
       <h2>Welcome to Your Dashboard</h2>
       <p>Here, you can manage your healthcare information.</p>
 
@@ -19,3 +19,4 @@ const PatientDashboardPage = () => {
 };
 
 export default PatientDashboardPage;
+

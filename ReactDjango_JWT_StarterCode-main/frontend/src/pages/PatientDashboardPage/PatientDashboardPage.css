@@ -1,7 +1,21 @@
+/* PatientDashboardPage.css */
 
+.patient-dashboard-container {
+    background-image: url('https://www.capecodhealth.org/app/files/public/d954535e-b9c5-4611-8fb9-b64a0cc3e3ff/feb-heart-month-2022-cta.jpg'); /* Replace with the actual path to your image */
+    background-size: cover; /* Cover the entire container with the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-position: center;
+    min-height: 100vh; /* Set a minimum height to cover the entire viewport */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Add padding to center content */
+}
+  
 .add-info-button {
     margin: 10px;
-    background-color:rgb(169, 43, 169);
+    background-color:darkslateblue;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -15,6 +29,15 @@
   }
 
   h2{
-    margin-left:20px;
+    font-size: 24px;
     color:rgb(46, 44, 44);
+    margin-bottom: 200px;
+  }
+
+  p {
+    margin-right: 1000px;
+    margin-bottom: 400px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: aliceblue;
+
   }
