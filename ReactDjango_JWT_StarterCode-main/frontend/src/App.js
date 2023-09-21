@@ -10,6 +10,7 @@ import RegisterPage from "./pages/RegisterPage/RegisterPage";
 //import ERHome from "./pages/ERHome/ERHome";// May use later
 import ERHome2 from "./pages/ERHome2/ERHome2";
 import PatientDetailsPage from "./pages/PatientDetailsPage/PatientDetailsPage";
+import PatientDashboardPage from './pages/PatientDashboardPage/PatientDashboardPage';
 import "react-toastify/dist/ReactToastify.css"; 
 import { ToastContainer } from "react-toastify";
 import InsurancePage from "./pages/InsurancePage/InsurancePage";
@@ -42,6 +43,7 @@ function App() {
           <Route path="/select-patient" element={<ERHome2 />} />
           <Route path="/queue" element={<QueuePage />} />
           <Route path="/medical-supplies" element={<MedicalSuppliesPage />} />
+          <Route path="/patient-dashboard" element={<PatientDashboardPage />} />
          </>  
         ) : (
           <Route path="/" element={<LandingPage />} />

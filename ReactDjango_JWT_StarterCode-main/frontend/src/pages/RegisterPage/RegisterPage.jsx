@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 import useCustomForm from "../../hooks/useCustomForm";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './RegisterPage.css';
 
 const RegisterPage = () => {
@@ -17,16 +17,31 @@ const RegisterPage = () => {
     painLevel: "",       // Add Pain Level field
   };
 
-  const [formData, handleInputChange, handleSubmit] = useCustomForm(
-    defaultValues,
-    registerUser
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Registration logic (e.g., API request to register the user)
+      // After successful registration:
+      await registerUser(formData);
+      navigate("/patient-dashboard");
+    } catch (error) {
+      console.error(error);
+      // Handle registration errors, if any
+    }
+  };
+
+  const [formData, handleInputChange] = useCustomForm(
+    defaultValues
   );
 
   return (
     <div className="register-container">
       <form className="register-form" onSubmit={handleSubmit}>
         <label>
-          Username:{" "}
+          Username:
           <input
             type="text"
             name="username"
@@ -35,7 +50,7 @@ const RegisterPage = () => {
           />
         </label>
         <label>
-          First Name:{" "}
+          First Name:
           <input
             type="text"
             name="firstName"
@@ -44,7 +59,7 @@ const RegisterPage = () => {
           />
         </label>
         <label>
-          Last Name:{" "}
+          Last Name:
           <input
             type="text"
             name="lastName"
@@ -53,7 +68,7 @@ const RegisterPage = () => {
           />
         </label>
         <label>
-          Email:{" "}
+          Email:
           <input
             type="text"
             name="email"
@@ -62,16 +77,16 @@ const RegisterPage = () => {
           />
         </label>
         <label>
-          Password:{" "}
+          Password:
           <input
-            type="text"
+            type="password"
             name="password"
             value={formData.password}
             onChange={handleInputChange}
           />
         </label>
         <label>
-          Address:{" "}
+          Address:
           <input
             type="text"
             name="address"
@@ -80,7 +95,7 @@ const RegisterPage = () => {
           />
         </label>
         <label>
-          Phone Number:{" "}
+          Phone Number:
           <input
             type="text"
             name="phoneNumber"
@@ -89,7 +104,7 @@ const RegisterPage = () => {
           />
         </label>
         <label>
-          Pain Level: 1-5{" "}
+          Pain Level (1-5):
           <input
             type="number"
             name="painLevel"
@@ -101,7 +116,7 @@ const RegisterPage = () => {
           NOTE: Make this an uncommon password with characters, numbers, and
           special characters!
         </p>
-        <button>Register!</button>
+        <button type="submit">Register!</button>
       </form>
       <Link to="/add-insurance" className="add-info-button">
         Add Insurance Credentials
@@ -114,4 +129,6 @@ const RegisterPage = () => {
 };
 
 export default RegisterPage;
+
+
 
