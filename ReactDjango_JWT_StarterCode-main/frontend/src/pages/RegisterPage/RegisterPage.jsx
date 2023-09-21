@@ -118,12 +118,7 @@ const RegisterPage = () => {
         </p>
         <button type="submit">Register!</button>
       </form>
-      <Link to="/add-insurance" className="add-info-button">
-        Add Insurance Credentials
-      </Link>
-      <Link to="/add-rideshare" className="add-info-button">
-        Add Rideshare
-      </Link>
+      
     </div>
   );
 };

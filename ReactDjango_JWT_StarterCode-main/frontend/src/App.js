@@ -43,13 +43,14 @@ function App() {
           <Route path="/select-patient" element={<ERHome2 />} />
           <Route path="/queue" element={<QueuePage />} />
           <Route path="/medical-supplies" element={<MedicalSuppliesPage />} />
-          <Route path="/patient-dashboard" element={<PatientDashboardPage />} />
+          
          </>  
         ) : (
           <Route path="/" element={<LandingPage />} />
           
         )}
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/patient-dashboard" element={<PatientDashboardPage />} />
         <Route path="/add-insurance" element={<InsurancePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/patient/:patientId" element={<PatientDetailsPage />} />

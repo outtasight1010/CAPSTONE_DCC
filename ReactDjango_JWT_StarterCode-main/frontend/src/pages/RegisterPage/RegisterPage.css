@@ -8,7 +8,7 @@
   align-items: center;
   margin-bottom: 100px;
   margin-top: 100px;
-  background-color: #f4f4f4;
+  background-color:aliceblue;
 }
 
 /* Form styles */
@@ -61,19 +61,5 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Link button styles */
-.add-info-button {
-  margin-top: 10px;
-  background-color: #17a2b8;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 4px;
-  display: inline-block;
-  transition: background-color 0.2s ease-in-out;
-}
 
-.add-info-button:hover {
-  background-color: #117a8b;
-}
 
