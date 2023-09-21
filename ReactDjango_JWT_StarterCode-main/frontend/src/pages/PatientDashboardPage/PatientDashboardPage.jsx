@@ -5,8 +5,7 @@ import './PatientDashboardPage.css';
 const PatientDashboardPage = () => {
   return (
     <div className="patient-dashboard-container">
-      <h2>Welcome to Your Dashboard</h2>
-      <p>Here, you can manage your healthcare information.</p>
+      <h2>Welcome to Your Patient Dashboard</h2>
 
       <Link to="/add-insurance" className="add-info-button">
         Add Insurance Credentials

@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px; /* Add padding to center content */
+    padding: 10px; /* Add padding to center content */
 }
   
 .add-info-button {
@@ -31,13 +31,7 @@
   h2{
     font-size: 24px;
     color:rgb(46, 44, 44);
-    margin-bottom: 200px;
+    margin-bottom: 100px;
   }
 
-  p {
-    margin-right: 1000px;
-    margin-bottom: 400px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: aliceblue;
-
-  }
+  
