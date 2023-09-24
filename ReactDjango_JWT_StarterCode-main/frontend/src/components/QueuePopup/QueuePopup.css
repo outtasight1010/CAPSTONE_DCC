@@ -3,19 +3,29 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 20px;
+    background-color: aliceblue;
+    border: 1px solid lightpink;
+    padding: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     text-align: center;
   }
   
   .queue-popup h3 {
     margin: 0;
+    font-size: smaller;
+    font-weight: bold;
+  }
+
+  .queue-popup p {
+    color:darkmagenta;
+    font-size: smaller;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 5px;
+    margin-left: 0px;
   }
   
   .queue-popup button {
-    background-color: #007bff;
+    background-color: #961596;
     color: white;
     border: none;
     padding: 5px 15px;

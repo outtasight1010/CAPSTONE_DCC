@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import './PatientDashboardPage.css';
-import QueuePopup from "../../components/QueuePage/QueuePage";
+import QueuePopup from "../../components/QueuePopup/QueuePopup";
 
 
 const PatientDashboardPage = () => {
