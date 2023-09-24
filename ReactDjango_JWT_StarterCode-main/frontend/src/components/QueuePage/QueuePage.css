@@ -1,41 +1,65 @@
+/* QueuePage.css */
+.queue-page-container {
+  background-color: aliceblue;
+  padding: 20px;
+}
 
-.queue-page {
-    background-color:aliceblue;
- }
+/* QueuePage.css */
+.queue-header {
+  font-size: 38px;
+  color: #ec75e4; /* A bright pink color */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 6px; /* Wider letter spacing */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for a funky effect */
+  background-image: linear-gradient(to right, #FF4081, #00BCD4); /* Gradient background */
+  background-clip: text; /* Clip the background to the text */
+  -webkit-background-clip: text; /* For Safari/Chrome */
+  -webkit-text-fill-color: transparent; /* Make the text transparent */
+  animation: funkyText 3s infinite alternate; /* Add an animation for extra funkiness */
+  padding-left: 650px;
+}
 
- .container {
-    background-color:plum;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
+@keyframes funkyText {
+  0% {
+    transform: translateY(0);
   }
+  100% {
+    transform: translateY(-5px);
+  }
+}
 
-  h3{
-    align-items: center;
-    margin-left: 700px;
-    font-size: 30px; 
-    color: #7a2a8e; 
-    text-transform: uppercase; 
-    letter-spacing: 2px; 
-    margin-bottom: 20px; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
-    }
-  
-  
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-    font-size: smaller;
-  }
-  
-  li {
-    margin: 5px 0;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color:darkslategray;
-  }
+.queue-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.queue-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid aliceblue;
+  background-color:whitesmoke;
+}
+
+
+.queue-patient-info {
+  background-color: #e269f2; 
+  color: #fff; 
+  padding: 10px; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  margin: 10px 0; 
+  transition: transform 0.2s ease-in-out; 
+}
+
+.queue-patient-info:hover {
+  transform: scale(1.05); 
+}
+
+
+.queue-patient-info li {
+  margin-bottom: 10px;
+}
+
   
   

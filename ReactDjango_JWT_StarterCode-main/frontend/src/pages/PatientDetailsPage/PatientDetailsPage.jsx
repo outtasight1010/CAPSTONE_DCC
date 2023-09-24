@@ -30,10 +30,12 @@ const PatientDetailsPage = () => {
   }, [patientId, token]);
   
   return (
-      <div className="container">
-        <h2>Patient Details</h2>
-        {patientDetails ? (
-          <div className="patient-details">
+    <div className="patient-details-container">
+      <h2 className="patient-details-heading">
+      <span className="cool-text">Patient</span> Details
+    </h2>
+      {patientDetails ? (
+        <div className="patient-details">
           <p><strong>First Name:</strong> {patientDetails.first_name}</p>
           <p><strong>Last Name:</strong> {patientDetails.last_name}</p>
           <p><strong>Contact Number:</strong> {patientDetails.contact_number}</p>
@@ -48,6 +50,7 @@ const PatientDetailsPage = () => {
       )}
     </div>
   );
+  
 };
 
   export default PatientDetailsPage;

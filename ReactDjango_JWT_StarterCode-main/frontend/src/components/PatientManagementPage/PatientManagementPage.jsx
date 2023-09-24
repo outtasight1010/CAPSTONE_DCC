@@ -7,7 +7,6 @@ const PatientManagementPage = ({ token }) => {
     <div>
       <h1>Patient Management</h1>
       <AddPatientForm token={token} />
-      {/* Other components and content */}
     </div>
   );
 };

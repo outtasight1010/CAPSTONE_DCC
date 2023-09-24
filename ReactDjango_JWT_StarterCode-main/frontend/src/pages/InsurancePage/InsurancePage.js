@@ -4,7 +4,7 @@ const InsurancePage = () => {
   const [insuranceName, setInsuranceName] = useState("");
   const [policyNumber, setPolicyNumber] = useState("");
   const [noInsurance, setNoInsurance] = useState(false);
-  
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,48 +16,55 @@ const InsurancePage = () => {
     setInsuranceName("");
     setPolicyNumber("");
     setNoInsurance(false);
+    // Set submitted to true to display the "Thank you" message
+    setSubmitted(true);
   };
 
   return (
     <div className="container">
       <h2>Add Insurance Credentials</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="insuranceName">Insurance Name:</label>
-          <input
-            type="text"
-            id="insuranceName"
-            value={insuranceName}
-            onChange={(e) => setInsuranceName(e.target.value)}
-            className="form-control"
-          />
-        </div>
-        <div>
-          <label htmlFor="policyNumber">Policy Number:</label>
-          <input
-            type="text"
-            id="policyNumber"
-            value={policyNumber}
-            onChange={(e) => setPolicyNumber(e.target.value)}
-            className="form-control"
-          />
-        </div>
-        <div>
-          <label>
+      {submitted ? (
+        <p>Thank you for submitting your insurance information!</p>
+      ) : (
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor="insuranceName">Insurance Name:</label>
             <input
-              type="checkbox"
-              checked={noInsurance}
-              onChange={(e) => setNoInsurance(e.target.checked)}
+              type="text"
+              id="insuranceName"
+              value={insuranceName}
+              onChange={(e) => setInsuranceName(e.target.value)}
+              className="form-control"
             />
-            No Insurance
-          </label>
-        </div>
-        
-        
-        <button type="submit">Submit</button>
-      </form>
+          </div>
+          <div>
+            <label htmlFor="policyNumber">Policy Number:</label>
+            <input
+              type="text"
+              id="policyNumber"
+              value={policyNumber}
+              onChange={(e) => setPolicyNumber(e.target.value)}
+              className="form-control"
+            />
+          </div>
+          <div>
+            <label>
+              <input
+                type="checkbox"
+                checked={noInsurance}
+                onChange={(e) => setNoInsurance(e.target.checked)}
+              />
+              No Insurance
+            </label>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      )}
     </div>
   );
 };
 
 export default InsurancePage;
+
+
+
