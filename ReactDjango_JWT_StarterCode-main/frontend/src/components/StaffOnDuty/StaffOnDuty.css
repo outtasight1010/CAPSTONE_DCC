@@ -32,10 +32,10 @@
 
  
 #bottom-image {
-    width: 200px; 
+    width: 500px; 
     height: auto; 
     margin-top: 40px; 
-    margin-left: 1260px;
+    margin-left: 550px;
   }
   
  
@@ -43,6 +43,12 @@
     opacity: 0.8;
   }
   
-  
+  .staff-heading {
+    font-size: 25px; 
+    color: #407cf4; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+  }
   
   

@@ -41,7 +41,7 @@ const MedicalSuppliesPage = () => {
 
   return (
     <div className="medical-supplies-container">
-      <h2>Medical Supplies</h2>
+      <h2 className="supplies-heading">Current Inventory</h2>
       <img
   src={'https://t4.ftcdn.net/jpg/03/03/86/77/240_F_303867793_FLubzhbNPUPiMdInEOXYW56n1BoZHBjM.jpg'}
   alt="Medical Supplies"
@@ -75,7 +75,6 @@ const MedicalSuppliesPage = () => {
         <button type="submit">Update</button>
       </form>
 
-      {/* Display supplies vertically */}
       <ul className="supply-list">
         {supplies.map((supply, index) => (
           <li key={index} className="supply-item">

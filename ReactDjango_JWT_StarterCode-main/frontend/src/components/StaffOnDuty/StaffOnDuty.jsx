@@ -27,7 +27,7 @@ const StaffOnDutyPage = () => {
 
   return (
     <div className="staff-on-duty-container">
-      <h2>Staff on Duty</h2>
+      <h2 className='staff-heading'>Staff on Duty</h2>
       <ul>
         {staffOnDuty.map((staff) => (
           <li key={staff.id} className="staff-on-duty-item">
