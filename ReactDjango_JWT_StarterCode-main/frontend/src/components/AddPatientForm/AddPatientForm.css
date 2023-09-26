@@ -13,7 +13,7 @@
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 label {
@@ -58,5 +58,12 @@ button:hover {
   color: darkblue;
 }
 
-  
+.cool-heading {
+  font-size: 25px; 
+  color: #407cf4; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
   

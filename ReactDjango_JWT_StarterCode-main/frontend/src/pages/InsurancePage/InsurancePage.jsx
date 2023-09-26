@@ -23,7 +23,7 @@ const InsurancePage = () => {
 
   return (
     <div className="insurance-container">
-      <h2>Add Insurance Credentials</h2>
+      <h2 className="insurance-heading">Add Insurance Credentials Here</h2>
       {submitted ? (
         <p>Thank you for submitting your insurance information!</p>
       ) : (

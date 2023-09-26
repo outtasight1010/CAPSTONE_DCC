@@ -30,7 +30,7 @@ const AddPatientForm = () => {
 
   return (
     <div className="add-patient-container">
-      <h2>Add Patient</h2>
+      <h2 className="cool-heading">Add Patient</h2>
       <form onSubmit={handleSubmit} className="patient-form">
         <div className="form-group">
           <label htmlFor="firstName">First Name:</label>
