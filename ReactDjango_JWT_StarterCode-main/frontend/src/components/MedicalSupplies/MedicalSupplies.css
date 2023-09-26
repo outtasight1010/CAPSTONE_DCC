@@ -10,7 +10,7 @@
   }
   
   .form-group label {
-    color: #FF0000; /* Change to your desired font color (e.g., red) */
+    color: #FF0000; 
   }
   
   input[type="text"],
@@ -18,7 +18,7 @@
     width: 100%;
     padding: 5px;
     margin-top: 5px;
-    color: #333; /* Change to your desired font color for inputs */
+    color: #333; 
   }
   
   .supply-list {
@@ -27,7 +27,7 @@
   }
   
   .supply-item {
-    color: blue; /* Change to your desired font color for supply items */
+    color: blue; 
   }
   
   .img {

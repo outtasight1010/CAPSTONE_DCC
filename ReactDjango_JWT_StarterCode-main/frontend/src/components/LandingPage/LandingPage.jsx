@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
-    <div className="landing-page background-image"> {/* Add the background-image class here */}
+    <div className="landing-page background-image"> 
       <h2 className="landing-title">ER Excellence: Treating Urgencies, & Valuing YOUR Time</h2>
       <div className="image-container">
         <a href="#" className="image-link">

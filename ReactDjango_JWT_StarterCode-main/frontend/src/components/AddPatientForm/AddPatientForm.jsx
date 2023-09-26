@@ -4,7 +4,7 @@ import './AddPatientForm.css';
 const AddPatientForm = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
-  const [patients, setPatients] = useState([]); // This state will store patient entries
+  const [patients, setPatients] = useState([]);
 
   const handleFirstNameChange = (e) => {
     setFirstName(e.target.value);
@@ -17,25 +17,22 @@ const AddPatientForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Create a new patient entry object
     const newPatient = {
       firstName,
       lastName,
     };
 
-    // Add the new patient entry to the list
     setPatients([...patients, newPatient]);
 
-    // Reset form fields
     setFirstName('');
     setLastName('');
   };
 
   return (
-    <div>
+    <div className="add-patient-container">
       <h2>Add Patient</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
+      <form onSubmit={handleSubmit} className="patient-form">
+        <div className="form-group">
           <label htmlFor="firstName">First Name:</label>
           <input
             type="text"
@@ -44,7 +41,7 @@ const AddPatientForm = () => {
             onChange={handleFirstNameChange}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="lastName">Last Name:</label>
           <input
             type="text"
@@ -55,7 +52,7 @@ const AddPatientForm = () => {
         </div>
         <button type="submit">Add Patient</button>
       </form>
-      <table>
+      <table className="patient-list">
         <thead>
           <tr>
             <th>First Name</th>
@@ -76,5 +73,6 @@ const AddPatientForm = () => {
 };
 
 export default AddPatientForm;
+
 
 

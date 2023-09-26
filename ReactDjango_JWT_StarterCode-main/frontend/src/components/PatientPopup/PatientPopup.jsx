@@ -20,7 +20,7 @@ const PatientPopup = ({ patient }) => {
         <h2>Patient Details</h2>
         <p>Name: {patient.name}</p>
         <p>Age: {patient.age}</p>
-        {/* Display more patient information */}
+        
         <button onClick={closePopup}>Close</button>
       </Modal>
     </div>

@@ -1,11 +1,11 @@
 .landing-page {
-    background-image: url('https://mcdn.wallpapersafari.com/medium/48/4/Ucdm0N.jpg'); /* Relative path to your image file */
+    background-image: url('https://mcdn.wallpapersafari.com/medium/48/4/Ucdm0N.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding: 20px;
     text-align: center;
-    min-height: 100vh; /* Ensure the background covers the entire viewport height */
+    min-height: 100vh; 
   }
   
   .landing-title {
@@ -29,7 +29,7 @@
   }
 
 body {
-    background-color:aliceblue; /* Set your desired background color here */
+    background-color:aliceblue; 
     margin: 0; /* Remove default body margin */
     padding: 0; /* Remove default body padding */
   }
@@ -38,20 +38,20 @@ body {
     border: 5px #f0f0f0;
     padding: 10px;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    max-width: 500px; /* Limit the width of the container */
-    margin: 0 auto; /* Center the container horizontally */
+    justify-content: center;
+    align-items: center; 
+    max-width: 500px; 
+    margin: 0 auto; 
     background-color:whitesmoke;
   }
   
   .image-link {
     display: inline-block;
-    transition: transform 0.3s; /* Add smooth transition for the zoom effect */
+    transition: transform 0.3s; 
   }
   
   .image-link:hover {
-    transform: scale(1.1); /* Apply the zoom effect on hover */
+    transform: scale(1.1); 
   }
   .landing-title {
     font-size: 24px;
@@ -62,7 +62,7 @@ body {
     max-width: 100%;
     height: auto;
   }
-  /* LandingPage.css */
+  
 .button-container {
     display: flex;
     justify-content: center;

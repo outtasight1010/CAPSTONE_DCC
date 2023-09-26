@@ -5,7 +5,7 @@ const MedicalSuppliesPage = () => {
   const [supplyName, setSupplyName] = useState("");
   const [quantity, setQuantity] = useState("");
   const [supplies, setSupplies] = useState([
-    // Initialize with some sample supplies
+    
     { id: 1, supplyName: "Adhesive bandages", quantity: 10 },
     { id: 2, supplyName: "Gauze", quantity: 5 },
     { id: 3, supplyName: "Hypodermic needles", quantity: 8 },
@@ -20,21 +20,21 @@ const MedicalSuppliesPage = () => {
   const handleFormSubmit = (event) => {
     event.preventDefault();
 
-    // Find the supply to update by its name
+    // Finding supply to update by its name
     const updatedSupplies = supplies.map((supply) => {
       if (supply.supplyName === supplyName) {
         return {
           ...supply,
-          quantity: parseInt(quantity), // Update quantity
+          quantity: parseInt(quantity), // Updating quantity
         };
       }
       return supply;
     });
 
-    // Update the supplies list with the updated supply
+    // Update supplies list with the updated supply
     setSupplies(updatedSupplies);
 
-    // Reset the form fields after submitting
+    // Reset form fields after submitting
     setSupplyName("");
     setQuantity("");
   };

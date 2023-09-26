@@ -1,4 +1,4 @@
-/* DashboardPage.css */
+
 .dashboard-container {
     background-image: url('./image_4.jpg');
     background-size: cover;
@@ -16,7 +16,6 @@
     justify-content: center;
     text-align: center;
     color: white;
-    /*background-color: rgba(239, 213, 234, 0.7);*/
     padding: 2rem;
   }
 
@@ -55,19 +54,19 @@ blockquote p {
 .dashboard-actions button {
   background-color: #984491;
   color: #fff;
-  padding: 8px 12px; /* Adjust the padding to make it smaller */
+  padding: 8px 12px; 
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
-  font-size: 8px; /* Adjust the font size */
-  margin-right: 10px; /* Add margin to separate it from other links */
+  font-size: 8px; 
+  margin-right: 10px; 
 }
 
 .dashboard-actions button:hover {
   background-color: #9f1e92;
 }
 
-/* Rest of your styles */
+
 
   

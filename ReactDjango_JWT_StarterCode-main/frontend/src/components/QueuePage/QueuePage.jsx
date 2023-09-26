@@ -26,13 +26,13 @@ const QueuePage = () => {
   }, [token]); 
 
   return (
-    <div className="queue-page-container"> {/* Use the CSS class for your container */}
+    <div className="queue-page-container">
       <h2 className="queue-header">Queue</h2>
       {queuePatients.length > 0 ? (
-        <ul className="queue-list"> {/* Use the CSS class for your list */}
+        <ul className="queue-list"> 
           {queuePatients.map((queue) => (
-            <li key={queue.id} className="queue-item"> {/* Use the CSS class for your list items */}
-              <ul className="queue-patient-info"> {/* Use the CSS class for patient info list */}
+            <li key={queue.id} className="queue-item"> 
+              <ul className="queue-patient-info"> 
                 {queue.queue_entries.map((queueEntry, index) => (
                   <li key={index}>
                     First Name: {queueEntry.patient.first_name}<br />
