@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./InsurancePage.css";
 
 const InsurancePage = () => {
   const [insuranceName, setInsuranceName] = useState("");
@@ -8,7 +9,7 @@ const InsurancePage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here, e.g. send data to the backend
+    // Handle form submission here, e.g., send data to the backend
     console.log("Insurance Name:", insuranceName);
     console.log("Policy Number:", policyNumber);
     console.log("No Insurance:", noInsurance);
@@ -21,13 +22,13 @@ const InsurancePage = () => {
   };
 
   return (
-    <div className="container">
+    <div className="insurance-container">
       <h2>Add Insurance Credentials</h2>
       {submitted ? (
         <p>Thank you for submitting your insurance information!</p>
       ) : (
         <form onSubmit={handleSubmit}>
-          <div>
+          <div className="form-group">
             <label htmlFor="insuranceName">Insurance Name:</label>
             <input
               type="text"
@@ -37,7 +38,7 @@ const InsurancePage = () => {
               className="form-control"
             />
           </div>
-          <div>
+          <div className="form-group">
             <label htmlFor="policyNumber">Policy Number:</label>
             <input
               type="text"
@@ -47,7 +48,7 @@ const InsurancePage = () => {
               className="form-control"
             />
           </div>
-          <div>
+          <div className="form-group">
             <label>
               <input
                 type="checkbox"
@@ -65,6 +66,7 @@ const InsurancePage = () => {
 };
 
 export default InsurancePage;
+
 
 
 

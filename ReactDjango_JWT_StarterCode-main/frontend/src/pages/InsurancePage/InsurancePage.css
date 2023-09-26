@@ -1,0 +1,48 @@
+.insurance-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 75vh; /* Adjust the height as needed */
+    background-color: #f2bcf5; /* Set your desired background color */
+  }
+  
+  .insurance-form {
+    background-color: #cc45f2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .insurance-form label {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    
+  }
+
+  
+  
+  .insurance-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .insurance-form button[type="submit"] {
+    background-color: purple;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .insurance-form button[type="submit"]:hover {
+    background-color: #800080; /* Darker purple on hover */
+  }
+  
