@@ -115,23 +115,31 @@ const RegisterPage = () => {
           />
         </label>
         <label className="reason-for-visit">
-          Reason for Visit:
-          <input
-            type="text"
-            name="visitReason"
-            value={formData.visitReason}
-            onChange={handleInputChange}
-            style={{ width: "100%", height: "200px" }}
-          />
-        </label>
-        <p style={{ fontSize: "12px" }}>
-          NOTE: Make this an uncommon password with characters, numbers, and
-          special characters!
-        </p>
-        <button type="submit">Register!</button>
-      </form>
+  Reason for Visit:
+  <div className="input-container">
+    <input
+      type="text"
+      name="visitReason"
+      value={formData.visitReason}
+      onChange={handleInputChange}
+      style={{ width: "100%", height: "100px" }}
+    />
+    <img
+      src="https://img.freepik.com/premium-photo/white-heart-watercolor-seamless-pattern_638332-875.jpg?size=626&ext=jpg&ga=GA1.1.606416070.1695700515&semt=ais"
+      alt="Visit Reason Icon"
+      style={{ width: "100%", height: "200px" }}
+    />
+  </div>
+</label>
+
+    <p style={{ fontSize: "12px" }}>
+      NOTE: Make this an uncommon password with characters, numbers, and
+      special characters!
+    </p>
+    <button type="submit">Register!</button>
+    </form>
       
-    </div>
+  </div>
   );
 };
 
