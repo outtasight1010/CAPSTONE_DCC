@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 75vh; /* Adjust the height as needed */
-    background-color: #f2bcf5; /* Set your desired background color */
+    min-height: 75vh; 
+    background-color: #ecc6ee; 
   }
   
   .insurance-form {
@@ -15,13 +15,15 @@
     text-align: center;
   }
   
-  .insurance-form label {
-    display: block;
-    margin-bottom: 20px;
-    font-weight: bold;
-    
+  .label {
+    /* Style the label names */
+    display: block !important;
+    margin-bottom: 10px !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+    color: purple !important;
+    text-transform: uppercase !important;
   }
-
   
   
   .insurance-form input[type="text"] {
@@ -43,6 +45,6 @@
   }
   
   .insurance-form button[type="submit"]:hover {
-    background-color: #800080; /* Darker purple on hover */
+    background-color: #800080; 
   }
   
