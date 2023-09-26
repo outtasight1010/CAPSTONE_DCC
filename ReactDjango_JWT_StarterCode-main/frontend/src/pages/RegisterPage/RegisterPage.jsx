@@ -12,9 +12,10 @@ const RegisterPage = () => {
     password: "",
     firstName: "",
     lastName: "",
-    address: "",         // Add Address field
-    phoneNumber: "",     // Add Phone Number field
-    painLevel: "",       // Add Pain Level field
+    address: "",         
+    phoneNumber: "",     
+    painLevel: "",       
+    visitReason: "",
   };
 
   const navigate = useNavigate();
@@ -92,6 +93,7 @@ const RegisterPage = () => {
             name="address"
             value={formData.address}
             onChange={handleInputChange}
+            style={{ width: "100%", height: "65px" }}
           />
         </label>
         <label>
@@ -110,6 +112,16 @@ const RegisterPage = () => {
             name="painLevel"
             value={formData.painLevel}
             onChange={handleInputChange}
+          />
+        </label>
+        <label className="reason-for-visit">
+          Reason for Visit:
+          <input
+            type="text"
+            name="visitReason"
+            value={formData.visitReason}
+            onChange={handleInputChange}
+            style={{ width: "100%", height: "200px" }}
           />
         </label>
         <p style={{ fontSize: "12px" }}>

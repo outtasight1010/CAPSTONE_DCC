@@ -1,45 +1,48 @@
-/* RegisterPage.css */
 
-/* Container styles */
 .register-container {
+  background-image: url('https://img.freepik.com/premium-vector/blue-abstract-background-health_66029-25.jpg?size=626&ext=jpg&ga=GA1.1.606416070.1695700515&semt=aishttps://img.freepik.com/free-photo/top-view-world-heart-day-with-copy-space_23-2148610470.jpg?size=626&ext=jpg&ga=GA1.1.606416070.1695700515&semt=ais'); /* Replace 'your-image-path.jpg' with the actual path to your image */
+  background-size: cover; /* Cover the entire container with the image */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  background-position: center;
+  min-height: 75vh; /* Set a minimum height to cover the entire viewport */
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 100px;
-  margin-top: 100px;
-  background-color:aliceblue;
+  justify-content: center;
+  padding: 10px; /* Add padding to center content */
 }
 
-/* Form styles */
+
 .register-form {
-  background-color: #fff;
+  background-color: rgb(227, 186, 233);
   padding: 20px;
-  
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  width: 500px; /* Increase the width */
+  width: 500px; 
   text-align: left;
-  margin-top: 20px; /* Adjust top margin */
-  margin-bottom: -180px; /* Adjust bottom margin */
+  margin-top: 20px; 
+  margin-bottom: 40px; 
 }
-/* Label styles */
+
+.reason-for-visit {
+  margin-top: 150px;
+}
+
 label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-weight: bold;
 }
 
-/* Input styles */
+
 input[type="text"] {
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-/* Note paragraph styles */
 .note {
   font-size: 12px;
   margin-bottom: 10px;
@@ -55,6 +58,7 @@ button {
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   align-items: center;
+ 
 }
 
 button:hover {

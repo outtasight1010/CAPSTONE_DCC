@@ -30,12 +30,12 @@ const PatientDashboardPage = () => {
       <Link to="/add-rideshare" className="add-info-button">
         Add Rideshare
       </Link>
-      {/* Button to open the QueuePopup */}
+     
       <button onClick={openQueuePopup} className="view-queue-button">
           View Queue
         </button>
 
-        {/* Render the QueuePopup when isQueuePopupOpen is true */}
+        
         {isQueuePopupOpen && <QueuePopup onClose={closeQueuePopup} />}
       
     </div>
