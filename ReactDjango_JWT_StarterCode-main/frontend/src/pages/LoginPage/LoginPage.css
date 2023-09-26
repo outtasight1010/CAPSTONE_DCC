@@ -1,19 +1,20 @@
 .error {
   color: red;
 }
-/* LoginPage.css */
 
-/* Container styles */
-.container {
+.login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
-  background-color: #f4f4f4;
+  height: 70vh;
+  background-image: url('https://cdn.pnghd.pics/data/758/one-small-heart-wallpaper-6.jpg'); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-/* Form styles */
-.form {
+
+.login-form {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
@@ -21,15 +22,15 @@
   width: 350px;
 }
 
-/* Label styles */
-label {
+
+.login-label {
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
-/* Input styles */
-input[type="text"],
+
+.login-input[type="text"],
 input[type="password"] {
   width: 100%;
   padding: 10px;
@@ -39,15 +40,15 @@ input[type="password"] {
   align-items: center;
 }
 
-/* Error message styles */
+
 .error {
   color: red;
   font-weight: bold;
 }
 
-/* Button styles */
+
 button {
-  background-color: #c358eb;
+  background-color: #510a6b;
   color: #fff;
   padding: 10px 20px;
   border: none;

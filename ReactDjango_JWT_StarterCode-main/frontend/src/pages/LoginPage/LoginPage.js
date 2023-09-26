@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import "react-toastify/dist/ReactToastify.css"; // Import the stylesheet
+import "react-toastify/dist/ReactToastify.css"; 
 import AuthContext from "../../context/AuthContext";
 import useCustomForm from "../../hooks/useCustomForm";
 import { Link } from "react-router-dom";
@@ -31,32 +31,35 @@ const LoginPage = () => {
     }
   };
 
-
   return (
-    <div className="container">
-      <form className="form" onSubmit={handleSubmit}>
-        <label>
+    <div className="login-container">
+      <form className="login-form" onSubmit={handleSubmit}>
+        <label className="login-label">
           Username:{" "}
           <input
             type="text"
             name="username"
             value={formData.username}
             onChange={handleInputChange}
+            className="login-input"
           />
         </label>
-        <label>
+        <label className="login-label">
           Password:{" "}
           <input
             type="password"
             name="password"
             value={formData.password}
             onChange={handleInputChange}
+            className="login-input"
           />
         </label>
         {isServerError ? (
-          <p className="error">Login failed, incorrect credentials!</p>
+          <p className="login-error">Login failed, incorrect credentials!</p>
         ) : null}
-        <button onClick={handleLogin}>Login!</button>
+        <button onClick={handleLogin} className="login-button">
+          Login!
+        </button>
       </form>
     </div>
   );
