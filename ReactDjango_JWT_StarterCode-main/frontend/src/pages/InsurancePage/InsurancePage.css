@@ -4,11 +4,11 @@
     align-items: center;
     justify-content: center;
     min-height: 75vh; 
-    background-color: #aba3f3; 
+    background-color: #cac4fa; 
   }
   
   .insurance-form {
-    background-color: #b41ee7;
+    background-color: #e2baf0;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
