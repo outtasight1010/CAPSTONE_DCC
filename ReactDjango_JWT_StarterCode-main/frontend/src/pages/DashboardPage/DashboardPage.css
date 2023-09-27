@@ -1,11 +1,12 @@
 
 .dashboard-container {
-    background-image: url('./image_4.jpg');
+    background-image: url('https://img.freepik.com/free-vector/realistic-icon-breast-cancer-awareness-concept-medical-stethoscope-with-heart-banner_134830-1606.jpg?w=2000');
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    min-height: 110vh;
     display: flex;
     flex-direction: column;
+    background-color:azure;
   }
   
   .dashboard-content {
@@ -15,20 +16,26 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color:aliceblue;
     padding: 2rem;
   }
 
-  h1 {
-    margin-bottom:400px;
-    
-}
+  .welcome-heading {
+    font-size: 26px; 
+    color: rgb(146, 151, 241); 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    font-weight: bolder;
+  }
 
   p {
-    font-size: 20px;
-    color: aliceblue;
-    font-weight: bold;
-    padding-bottom: 1rem;
+    font-size: 15px;
+    color:rgb(146, 151, 241);
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    font-weight: bolder;
     margin-left: 1000px;
   }
   

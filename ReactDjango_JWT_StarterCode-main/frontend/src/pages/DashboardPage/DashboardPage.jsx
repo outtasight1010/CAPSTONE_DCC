@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
 import './DashboardPage.css';
+import RoomManager from "../../components/RoomManager/RoomManager";
 
 const DashboardPage = () => {
   const [showQuote, setShowQuote] = useState(false);
@@ -32,7 +32,8 @@ const DashboardPage = () => {
   return (
     <div className="dashboard-container">
       <div className="dashboard-content">
-        <h1>Welcome to Your Dashboard</h1>
+        <h1 className="welcome-heading">Welcome to Your Dashboard</h1>
+        <RoomManager/>
         <p>What would you like to do?</p>
         <div className="dashboard-actions">
           <Link to="/select-patient">In Holding</Link>

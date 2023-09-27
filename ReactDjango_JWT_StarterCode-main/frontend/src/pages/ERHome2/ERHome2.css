@@ -9,5 +9,13 @@
     color: darkblue;
     font-weight: bold;
   }
+
+  .select-patient-heading {
+    font-size: 25px; 
+    color: #407cf4; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+  }
   
  

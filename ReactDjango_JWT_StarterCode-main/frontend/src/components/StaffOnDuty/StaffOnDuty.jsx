@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import useAuth from '../../hooks/useAuth';
 import './StaffOnDuty.css';
+import RoomManager from '../RoomManager/RoomManager';
 
 const StaffOnDutyPage = () => {
   const [staffOnDuty, setStaffOnDuty] = useState([]);
