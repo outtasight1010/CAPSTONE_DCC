@@ -23,4 +23,3 @@ class QueueEntry(models.Model):
         return f"{self.patient} - Position: {self.position}"
 
 
-# Create your models here.
