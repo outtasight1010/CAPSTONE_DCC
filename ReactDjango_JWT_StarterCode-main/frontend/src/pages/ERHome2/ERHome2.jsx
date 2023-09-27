@@ -41,7 +41,7 @@ const ERHome2 = () => {
   };
 
   return (
-    <div className="container">
+    <div className="dropdown-container">
       <h2 className="select-patient-heading">Select Patient:</h2>
       <select className="custom-dropdown" value={selectedPatient} onChange={handlePatientChange}>
         <option value="">Select a patient</option>
