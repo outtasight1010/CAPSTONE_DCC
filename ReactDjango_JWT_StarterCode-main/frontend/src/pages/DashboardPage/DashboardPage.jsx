@@ -50,7 +50,7 @@ const DashboardPage = () => {
           <Link to="/staff-on-duty">Staff on Duty</Link>
           <Link to="/medical-supplies">Medical Supplies</Link>
           <button onClick={handleDailyQuoteClick}>Daily Quote</button>
-          <button onClick={handleUpdateWaitTimeClick}>Current ER Wait Time</button>
+          <button onClick={handleUpdateWaitTimeClick}>Check ER Wait Time</button>
         </div>
         {showQuote && (
           <div className="quote-container">
@@ -59,7 +59,7 @@ const DashboardPage = () => {
             </blockquote>
           </div>
         )}
-        <p>Current Wait Time: {waitTime} minutes</p>
+        <p>ER Wait Time: {waitTime} minutes</p>
       </div>
     </div>
   );
