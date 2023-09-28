@@ -55,7 +55,7 @@ const DashboardPage = () => {
         {showQuote && (
           <div className="quote-container">
             <blockquote>
-              <p>{dailyQuote}</p>
+              <p>Daily Quote: {dailyQuote}</p>
             </blockquote>
           </div>
         )}
