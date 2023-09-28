@@ -6,7 +6,7 @@ import RoomManager from "../../components/RoomManager/RoomManager";
 const DashboardPage = () => {
   const [showQuote, setShowQuote] = useState(false);
   const [dailyQuote, setDailyQuote] = useState('');
-
+  const [waitTime, setWaitTime] = useState(0); 
 
   const quotes = [
     "Never ever ever EVER give up.",
@@ -15,7 +15,6 @@ const DashboardPage = () => {
     "Keep pushing forward.",
     "You are stronger than you think.",
     "We are all in this together.",
-    
   ];
 
   const getRandomQuote = () => {
@@ -27,6 +26,15 @@ const DashboardPage = () => {
     const quote = getRandomQuote();
     setDailyQuote(quote);
     setShowQuote(true);
+  };
+
+  const getRandomWaitTime = () => {
+    return Math.floor(Math.random() * (360 - 30 + 1)) + 30;
+  };
+
+  const handleUpdateWaitTimeClick = () => {
+    const randomWaitTime = getRandomWaitTime();
+    setWaitTime(randomWaitTime);
   };
 
   return (
@@ -42,6 +50,7 @@ const DashboardPage = () => {
           <Link to="/staff-on-duty">Staff on Duty</Link>
           <Link to="/medical-supplies">Medical Supplies</Link>
           <button onClick={handleDailyQuoteClick}>Daily Quote</button>
+          <button onClick={handleUpdateWaitTimeClick}>Current ER Wait Time</button>
         </div>
         {showQuote && (
           <div className="quote-container">
@@ -50,10 +59,12 @@ const DashboardPage = () => {
             </blockquote>
           </div>
         )}
+        <p>Current Wait Time: {waitTime} minutes</p>
       </div>
     </div>
   );
 };
 
 export default DashboardPage;
+
 

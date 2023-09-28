@@ -11,11 +11,21 @@ const QueuePopup = ({ onClose }) => {
   
   const queuePosition = Math.floor(Math.random() * 50) + 1;
 
+  const minWaitTime = 30; 
+const maxWaitTime = 360; 
+
+
+const randomWaitTime = Math.floor(Math.random() * (maxWaitTime - minWaitTime + 1)) + minWaitTime;
+
+console.log(`Random Wait Time: ${randomWaitTime} minutes`);
+ 
+
   return (
     <div className="queue-popup">
       <h3>Your Queue Position:</h3>
       <p>Welcome to the waiting room! You are number {queuePosition} in line.</p>
       <p>Patient: {randomName}</p>
+      <p>Estimated Wait Time: {randomWaitTime} minutes</p>
       <button onClick={onClose}>Close</button>
     </div>
   );

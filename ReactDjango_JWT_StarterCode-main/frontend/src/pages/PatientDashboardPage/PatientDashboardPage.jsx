@@ -7,24 +7,24 @@ const PatientDashboardPage = () => {
     const [isQueuePopupOpen, setIsQueuePopupOpen] = useState(false);
     const [showRideshareMessage, setShowRideshareMessage] = useState(false);
 
-    // Function to open the QueuePopup
+    
     const openQueuePopup = () => {
         setIsQueuePopupOpen(true);
     };
 
-    // Function to close the QueuePopup
+    
     const closeQueuePopup = () => {
         setIsQueuePopupOpen(false);
     };
 
-    // Handler function to show the rideshare message
+    
     const handleRideshareClick = () => {
         setShowRideshareMessage(true);
 
         
         setTimeout(() => {
             setShowRideshareMessage(false);
-        }, 5000); // Hide the message after 5 seconds 
+        }, 5000); // Hide message after 5 seconds 
     };
 
     return (
